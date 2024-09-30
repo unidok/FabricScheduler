@@ -1,6 +1,6 @@
 # Releases
-Releases: https://github.com/unidok/FabricScheduler/tree/master/releases\
-Last release: https://github.com/unidok/FabricScheduler/blob/master/releases/FabricScheduler-1.0.jar
+- Releases: https://github.com/unidok/FabricScheduler/tree/master/releases
+- Last release: https://github.com/unidok/FabricScheduler/blob/master/releases/FabricScheduler-1.0.jar
 
 # Examples
 ## Using delayed task
