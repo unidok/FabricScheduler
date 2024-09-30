@@ -71,8 +71,3 @@ class Mod : DedicatedServerModInitializer {
     }
 }
 ```
-
-## Registration scheduler
-```kt
-
-```
