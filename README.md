@@ -27,15 +27,11 @@ class IndexedTimerTask(
     period: Int,
     task: IndexedTimerTask.() -> Unit
 ) : TimerTask(period, task as TimerTask.() -> Unit) {
-    var iteration = 0
+    var index = 0
     override fun tick() {
-        if (iteration++ == limit) {
-            cancel()
-            return
-        }
-        if (tick++ % period == 0) {
-            task()
-        }
+        if (tick++ % period != 0) return
+        task()
+        if (index++ == limit) cancel()
     }
 }
 ```
