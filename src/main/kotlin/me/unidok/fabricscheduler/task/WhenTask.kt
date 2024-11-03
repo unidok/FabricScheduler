@@ -1,6 +1,5 @@
-package com.unidok.fabricscheduler.task
+package me.unidok.fabricscheduler.task
 
-@Suppress("UNCHECKED_CAST")
 open class WhenTask(
     val timeout: Int,
     val predicate: () -> Boolean,

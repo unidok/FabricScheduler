@@ -1,6 +1,6 @@
-package com.unidok.fabricscheduler
+package me.unidok.fabricscheduler
 
-import com.unidok.fabricscheduler.task.Task
+import me.unidok.fabricscheduler.task.Task
 import java.util.concurrent.ConcurrentHashMap
 
 interface Scheduler {
@@ -14,6 +14,6 @@ interface Scheduler {
 
     companion object {
         private var taskCounter = 0
-        fun newTaskId() = taskCounter++
+        fun newTaskId(): Int = taskCounter++
     }
 }

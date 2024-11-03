@@ -1,6 +1,6 @@
-package com.unidok.fabricscheduler.task
+package me.unidok.fabricscheduler.task
 
-import com.unidok.fabricscheduler.Scheduler
+import me.unidok.fabricscheduler.Scheduler
 
 open class Task(
     val task: Task.() -> Unit
@@ -17,6 +17,6 @@ open class Task(
         isCancelled = true
     }
 
-    final override fun hashCode() = id
-    final override fun equals(other: Any?) = other is Task && other.id == id
+    override fun hashCode() = id
+    override fun equals(other: Any?) = other is Task && other.id == id
 }

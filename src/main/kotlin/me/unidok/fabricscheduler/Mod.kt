@@ -1,4 +1,4 @@
-package com.unidok.fabricscheduler
+package me.unidok.fabricscheduler
 
 import net.fabricmc.api.ClientModInitializer
 

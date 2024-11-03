@@ -1,6 +1,5 @@
-package com.unidok.fabricscheduler.task
+package me.unidok.fabricscheduler.task
 
-@Suppress("UNCHECKED_CAST")
 class DelayedTask(
     override var delay: Int,
     task: DelayedTask.() -> Unit
