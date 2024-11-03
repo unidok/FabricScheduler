@@ -43,15 +43,13 @@ object ServerScheduler : Scheduler {
     override val tasks = ConcurrentHashMap<Int, Task>()
 
     override fun register() {
-        ServerTickEvents.START_SERVER_TICK.register(this::onTick)
-    }
-
-    fun onTick(server: MinecraftServer) {
-        val iterator = tasks.values.iterator()
-        while (iterator.hasNext()) {
-            val task = iterator.next()
-            task.tick()
-            if (task.isCancelled) iterator.remove()
+        ServerTickEvents.START_SERVER_TICK.register { _ ->
+            val iterator = tasks.values.iterator()
+            while (iterator.hasNext()) {
+                val task = iterator.next()
+                task.tick()
+                if (task.isCancelled) iterator.remove()
+            }
         }
     }
 }
